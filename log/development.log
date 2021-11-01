@@ -2182,3 +2182,63 @@ Unpermitted parameters: :utf8, :authenticity_token, :book, :commit
 Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 118.8.199.136 at 2021-11-01 11:01:43 +0000
+Cannot render console from 118.8.199.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 234ms (Views: 227.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 118.8.199.136 at 2021-11-01 11:01:45 +0000
+Cannot render console from 118.8.199.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 118.8.199.136 at 2021-11-01 11:01:47 +0000
+Cannot render console from 118.8.199.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 37ms (Views: 28.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books" for 118.8.199.136 at 2021-11-01 11:01:49 +0000
+Cannot render console from 118.8.199.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+XCOYC3hgLVbgkEENSH5hb9yNfeW1IFkntMNAwkNDWfPAom9lK5vYi4T+YFCysbZ62Hlvx9rIbpTUBW1btfmQ==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+Unpermitted parameters: :utf8, :authenticity_token, :book, :commit
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/books_controller.rb:6
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/books" for 118.8.199.136 at 2021-11-01 11:02:02 +0000
+Cannot render console from 118.8.199.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+ipMNLyUwG81n92AOr9QwO0CsTFkPzThfwRnN7IcSmNrcgnCWDGOLxWwiGyK8IFem3S8ru3Rs2KFAuYu5rcPw==", "book"=>{"title"=>"books55", "body"=>"kanndou"}, "commit"=>"Create Book"}
+Unpermitted parameters: :utf8, :authenticity_token, :book, :commit
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/books_controller.rb:6
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 41ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
